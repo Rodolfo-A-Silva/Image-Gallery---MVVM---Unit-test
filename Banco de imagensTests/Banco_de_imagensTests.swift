@@ -25,15 +25,6 @@ class Banco_de_imagensTests: XCTestCase {
         }
         waitForExpectations(timeout: 5, handler: nil)
     }
-
-    func test_verification_return_is_url(){
-        let expectation = self.expectation(description: "waiting")
-        resource.load(resource: ImagensModel.Get){ (loginResponse) in
-            XCTAssertNotNil(loginResponse)
-            expectation.fulfill()
-        }
-        waitForExpectations(timeout: 5, handler: nil)
-    }
    
 }
 
